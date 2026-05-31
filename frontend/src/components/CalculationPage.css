@@ -1,0 +1,81 @@
+.whatif-page { display: flex; flex-direction: column; gap: 22px; }
+.whatif-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, .72fr) minmax(0, 1fr);
+  gap: 18px;
+}
+.whatif-card { padding: 22px; overflow: hidden; }
+.whatif-card-head { margin-bottom: 20px; }
+.controls-card { display: flex; flex-direction: column; gap: 16px; }
+.whatif-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--app-muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+.whatif-field span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.whatif-field b { color: var(--app-text); font-size: 14px; }
+.whatif-field input[type='range'] { width: 100%; accent-color: #1d4ed8; }
+.result-card { display: flex; flex-direction: column; gap: 18px; }
+.whatif-result-top {
+  padding: 22px;
+  border-radius: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+}
+.whatif-result-top span { display: block; color: #bfdbfe; font-size: 12px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.whatif-result-top strong { display: block; margin-top: 8px; font-size: clamp(36px, 5vw, 58px); line-height: 1; letter-spacing: -.06em; }
+.whatif-result-top em { display: inline-block; margin-top: 12px; font-style: normal; font-weight: 850; }
+.positive { color: #86efac; }
+.negative { color: #fecaca; }
+.whatif-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.whatif-metrics div {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+.whatif-metrics span,
+.whatif-metrics small { display: block; color: var(--app-muted); font-size: 12px; }
+.whatif-metrics strong { display: block; margin: 5px 0 2px; color: var(--app-text); font-size: 22px; letter-spacing: -.04em; }
+.whatif-waterfall { display: grid; gap: 10px; }
+.whatif-waterfall-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) 90px;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.whatif-waterfall-row span { color: var(--app-muted); font-weight: 800; }
+.whatif-waterfall-row i { height: 12px; border-radius: 999px; overflow: hidden; background: #e2e8f0; }
+.whatif-waterfall-row em { display: block; height: 100%; border-radius: inherit; }
+.positive-bar { background: linear-gradient(90deg, #1d4ed8, #60a5fa); }
+.negative-bar { background: linear-gradient(90deg, #dc2626, #fb7185); }
+.whatif-waterfall-row strong { text-align: right; color: var(--app-text); }
+.whatif-page .chart-card img {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+@media (max-width: 980px) {
+  .whatif-grid { grid-template-columns: 1fr; }
+  .whatif-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .whatif-metrics { grid-template-columns: 1fr; }
+  .whatif-waterfall-row { grid-template-columns: 1fr; gap: 6px; }
+  .whatif-waterfall-row strong { text-align: left; }
+}
